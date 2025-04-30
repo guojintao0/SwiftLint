@@ -96,15 +96,15 @@ extension DuBlockWeakSelfRule {
 
             if let targetFunctionCallExpr {
                 /// MemberAccess
-//                if let calledExpression = targetFunctionCallExpr.calledExpression.as(MemberAccessExprSyntax.self) {
-//                    let memberAccessStr = DuSwiftSyntaxTool.syntaxStr(calledExpression)
-//                    if ignoreFunctionArray.contains(calledExpression.name.text) {
-//                        return .visitChildren
-//                    }
-//                    if ignoreCallExpressArray.contains(memberAccessStr) {
-//                        return .visitChildren
-//                    }
-//                }
+                if let calledExpression = targetFunctionCallExpr.calledExpression.as(MemberAccessExprSyntax.self) {
+                    let memberAccessStr = DuSwiftSyntaxTool.syntaxStr(calledExpression)
+                    if ignoreFunctionArray.contains(calledExpression.name.text) {
+                        return .visitChildren
+                    }
+                    if ignoreCallExpressArray.contains(memberAccessStr) {
+                        return .visitChildren
+                    }
+                }
                 ///
                 if let specializeExpr = targetFunctionCallExpr.calledExpression.as(SpecializeExprSyntax.self),
                    let identifierExpr = specializeExpr.expression.as(IdentifierExprSyntax.self),
