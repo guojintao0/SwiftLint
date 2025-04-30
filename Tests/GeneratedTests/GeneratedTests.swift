@@ -1034,6 +1034,12 @@ class ReturnValueFromVoidFunctionRuleGeneratedTests: SwiftLintTestCase {
     }
 }
 
+class UKIBlockWeakSelfRuleGeneratedTests: SwiftLintTestCase {
+    func testWithDefaultConfiguration() {
+        verifyRule(UKIBlockWeakSelfRule.description)
+    }
+}
+
 class SelfBindingRuleGeneratedTests: SwiftLintTestCase {
     func testWithDefaultConfiguration() {
         verifyRule(SelfBindingRule.description)

@@ -7,10 +7,9 @@
 
 import Foundation
 import SwiftSyntax
-
 struct UKIBlockWeakSelfRule: ConfigurationProviderRule, SwiftSyntaxRule {
 
-    var configuration = SeverityConfiguration<Self>(.warning)
+    var configuration = SeverityConfiguration<Self>(.error)
 
     init() {}
 
@@ -18,7 +17,7 @@ struct UKIBlockWeakSelfRule: ConfigurationProviderRule, SwiftSyntaxRule {
         identifier: "UKI_Block_Weak_Self_Rule",
         name: "Block Weak Self Rule",
         description: "在Block中使用self必须使用弱捕获，避免循环引用导致的内存泄漏及其他异常问题",
-        kind: .lint,
+        kind: .metrics,
         nonTriggeringExamples: [
             Example("""
             var block = { [weak self] in
