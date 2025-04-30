@@ -230,5 +230,6 @@ public let builtInRules: [Rule.Type] = [
     WeakDelegateRule.self,
     XCTFailMessageRule.self,
     XCTSpecificMatcherRule.self,
-    YodaConditionRule.self
+    YodaConditionRule.self,
+    UKIBlockWeakSelfRule.self
 ]

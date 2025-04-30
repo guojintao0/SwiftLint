@@ -8,14 +8,14 @@
 import Foundation
 import SwiftSyntax
 
-struct DuBlockWeakSelfRule: ConfigurationProviderRule, SwiftSyntaxRule {
+struct UKIBlockWeakSelfRule: ConfigurationProviderRule, SwiftSyntaxRule {
 
     var configuration = SeverityConfiguration<Self>(.warning)
 
     init() {}
 
     static let description = RuleDescription(
-        identifier: "Du_Block_Weak_Self_Rule",
+        identifier: "UKI_Block_Weak_Self_Rule",
         name: "Block Weak Self Rule",
         description: "在Block中使用self必须使用弱捕获，避免循环引用导致的内存泄漏及其他异常问题",
         kind: .lint,
@@ -41,7 +41,7 @@ struct DuBlockWeakSelfRule: ConfigurationProviderRule, SwiftSyntaxRule {
 }
 
 
-extension DuBlockWeakSelfRule {
+extension UKIBlockWeakSelfRule {
 
     final class Visitor: ViolationsSyntaxVisitor {
 
