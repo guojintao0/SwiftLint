@@ -5,7 +5,7 @@
 public let builtInRules: [Rule.Type] = [
     AccessibilityLabelForImageRule.self,
     UKIBlockWeakSelfRule.self,
-    UKISafeArrayRule.self,
+    UKISafeSubscriptRule.self,
     AccessibilityTraitForButtonRule.self,
     AnonymousArgumentInMultilineClosureRule.self,
     AnyObjectProtocolRule.self,

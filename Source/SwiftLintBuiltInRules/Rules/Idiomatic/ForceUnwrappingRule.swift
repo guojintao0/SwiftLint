@@ -1,12 +1,12 @@
 import SwiftSyntax
 
 struct ForceUnwrappingRule: OptInRule, SwiftSyntaxRule, ConfigurationProviderRule {
-    var configuration = SeverityConfiguration<Self>(.warning)
+    var configuration = SeverityConfiguration<Self>(.error)
 
     static let description = RuleDescription(
         identifier: "force_unwrapping",
         name: "Force Unwrapping",
-        description: "Force unwrapping should be avoided",
+        description: "请修改,禁止使用强制解包,防止出现不必要的闪退",
         kind: .idiomatic,
         nonTriggeringExamples: [
             Example("if let url = NSURL(string: query)"),

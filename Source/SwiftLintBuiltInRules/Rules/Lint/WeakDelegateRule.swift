@@ -1,12 +1,12 @@
 import SwiftSyntax
 
 struct WeakDelegateRule: OptInRule, SwiftSyntaxRule, ConfigurationProviderRule {
-    var configuration = SeverityConfiguration<Self>(.warning)
+    var configuration = SeverityConfiguration<Self>(.error)
 
     static let description = RuleDescription(
         identifier: "weak_delegate",
         name: "Weak Delegate",
-        description: "Delegates should be weak to avoid reference cycles",
+        description: "代理请使用weak修饰,防止出现内存泄露问题",
         kind: .lint,
         nonTriggeringExamples: [
             Example("class Foo {\n  weak var delegate: SomeProtocol?\n}\n"),

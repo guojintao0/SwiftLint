@@ -15,7 +15,7 @@ struct UKIBlockWeakSelfRule: ConfigurationProviderRule, SwiftSyntaxRule {
 
     static let description = RuleDescription(
         identifier: "UKI_Block_Weak_Self_Rule",
-        name: "Block Weak Self Rule",
+        name: "UKI Block Weak Self Rule",
         description: "在Block中使用self必须使用弱捕获，避免循环引用导致的内存泄漏及其他异常问题",
         kind: .metrics,
         nonTriggeringExamples: [
