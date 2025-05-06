@@ -4,7 +4,7 @@ struct LegacyHashingRule: SwiftSyntaxRule, ConfigurationProviderRule {
     var configuration = SeverityConfiguration<Self>(.warning)
 
     static let description = RuleDescription(
-        identifier: "legacy_hashing",
+        identifier: "legacy_hashing11",
         name: "Legacy Hashing",
         description: "Prefer using the `hash(into:)` function instead of overriding `hashValue`",
         kind: .idiomatic,

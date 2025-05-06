@@ -4,6 +4,7 @@
 /// The rule list containing all available rules built into SwiftLint.
 public let builtInRules: [Rule.Type] = [
     AccessibilityLabelForImageRule.self,
+    UKIBlockWeakSelfRule.self,
     AccessibilityTraitForButtonRule.self,
     AnonymousArgumentInMultilineClosureRule.self,
     AnyObjectProtocolRule.self,
@@ -230,6 +231,5 @@ public let builtInRules: [Rule.Type] = [
     WeakDelegateRule.self,
     XCTFailMessageRule.self,
     XCTSpecificMatcherRule.self,
-    YodaConditionRule.self,
-    UKIBlockWeakSelfRule.self
+    YodaConditionRule.self
 ]
